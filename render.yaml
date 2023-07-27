@@ -3,7 +3,7 @@ services:
     name: fastapi
     runtime: docker
     plan: free
-    repo: https://github.com/atlekbai/fastapi-boilerplate.git
+    repo: https://github.com/yamato999/noteMinder-server.git
     region: frankfurt
     branch: main
     envVars:
@@ -11,5 +11,4 @@ services:
         sync: false
     buildFilter:
       paths:
-      - app/**
-  
+        - app/**
