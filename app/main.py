@@ -15,11 +15,14 @@ def shutdown_db_client():
     client.close()
 
 
+CORS_METHODS = "GET,POST,PUT"
+CORS_HEADERS = "Content-Type,Authorization"
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=os.getenv("CORS_ORIGINS").split(","),
-    allow_methods=os.getenv("CORS_METHODS").split(","),
-    allow_headers=os.getenv("CORS_HEADERS").split(","),
+    allow_origins=["*"],
+    allow_methods=CORS_METHODS.split(","),
+    allow_headers=CORS_HEADERS.split(","),
     allow_credentials=True,
 )
 
