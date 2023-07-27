@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
-
+from app.notes.router import router as notes_router
 from app.auth.router import router as auth_router
 from app.config import client, env, fastapi_config
 
@@ -21,3 +21,4 @@ app.add_middleware(
 )
 
 app.include_router(auth_router, prefix="/auth", tags=["Auth"])
+app.include_router(notes_router, prefix="/notes", tags=["Notes"])

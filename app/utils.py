@@ -44,9 +44,11 @@ def import_routers(package_name):
 
     for _, module_name, _ in pkgutil.iter_modules(package.__path__, prefix):
         if not module_name.startswith(prefix + "router_"):
+            print(f"coolll to import {module_name}")
             continue
 
         try:
             importlib.import_module(module_name)
+            print(f"coo to import {module_name}")
         except Exception as e:
             print(f"Failed to import {module_name}, error: {e}")
