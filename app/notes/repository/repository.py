@@ -15,9 +15,8 @@ class ShanyrakRepository:
         note = self.database["notes"].insert_one(payload)
         return note.inserted_id
     
-    def create_tags(self, user_id: str, payload: dict, title: str):
+    def create_tags(self, user_id: str, payload: dict):
         payload["user_id"] = ObjectId(user_id)
-        payload["title"] = title
         note = self.database["tags"].insert_one(payload)
         return note.inserted_id
 
