@@ -27,7 +27,6 @@ class CreateTagsRequest(AppModel):
 
 class CreateTagsResponse(AppModel):
     id: Any = Field(alias="_id")
-    title: str
 
 
 @router.post("/values/", response_model=CreateTagsResponse)
