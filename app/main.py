@@ -15,7 +15,7 @@ def shutdown_db_client():
     client.close()
 
 
-CORS_METHODS = "GET,POST,PUT"
+CORS_METHODS = "GET,POST,PUT,DELETE"
 CORS_HEADERS = "Content-Type,Authorization"
 
 app.add_middleware(

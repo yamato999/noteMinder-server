@@ -22,7 +22,7 @@ logger.addHandler(console_handler)
 
 
 class CreateTagsRequest(AppModel):
-    description: str
+    tags: str
 
 
 class CreateTagsResponse(AppModel):
