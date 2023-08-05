@@ -8,7 +8,7 @@ openai.api_key = API_KEY
 
 # Генерация описания с помощью OpenAI API
 def generate_title(title: str) -> str:
-    prompt = f"choose a category from this list - [family, sport, nfactorial incubator] where each category separated by a comma, that can match this task/note: {title}.)"
+    prompt = f"choose a category from this list - [family, sport, nfactorial incubator, education, housework, work, health, hobby, holidays, shopping, fashion, books] where each category separated by a comma, that can match this task/note: {title}.)"
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt=prompt,

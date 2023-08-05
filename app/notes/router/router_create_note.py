@@ -21,6 +21,7 @@ console_handler.setLevel(logging.DEBUG)
 console_handler.setFormatter(formatter)
 logger.addHandler(console_handler)
 
+
 class CreateNoteRequest(AppModel):
     description: str
 
